@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigrinya Mastery - My Lessons</title>
+    <meta name="description" content="Your personal Tigrinya learning space. Jump into any lesson and start practicing.">
+    <link rel="icon" type="png" href="/images/bm1.png">
+    <style>
+        :root {
+            --bg-cream: #fdf3d8;
+            --pale-green: #eaf1eb;
+            --golden-yellow: #fceea7;
+            --muted-green: #8aa38c;
+            --charcoal: #2b2c30;
+            --bright-yellow: #fadc19;
+            --vibrant-tillian: #00ffff;
+            --white: #ffffff;
+            --accent-red: #d30000;
+            --very-green: #2e8b57;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            min-height: 100vh;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes flowGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes borderFlow {
+            0% { background-position: 0% 0%, 0% 50%; }
+            50% { background-position: 0% 0%, 100% 50%; }
+            100% { background-position: 0% 0%, 0% 50%; }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: var(--bg-cream);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #dcdcdc;
+            gap: 15px;
+        }
+
+        .logo-frame {
+            display: inline-flex;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--vibrant-tillian), var(--golden-yellow), var(--accent-red), var(--vibrant-tillian));
+            background-size: 300% 300%;
+            animation: flowGradient 6s ease infinite;
+            padding: 4px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(211, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-frame:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 20px rgba(211, 0, 0, 0.25);
+        }
+
+        .logo-inner {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-cream);
+            border-radius: 12px;
+        }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+            padding: 4px 8px 4px 12px;
+            display: block;
+        }
+
+        .logo-text {
+            color: var(--charcoal);
+            font-weight: 900;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            padding-right: 15px;
+        }
+
+        /* --- MAIN --- */
+        main {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 35px 20px 50px 20px;
+        }
+
+        .student-greeting {
+            margin-bottom: 25px;
+        }
+
+        .student-greeting h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--charcoal);
+            line-height: 1.2;
+        }
+
+        .student-greeting .greeting-sub {
+            font-size: 0.95rem;
+            color: var(--muted-green);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lesson-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--charcoal);
+            border: 1.5px solid #e8e4d8;
+            transition: all 0.25s ease;
+            animation: slideIn 0.4s ease forwards;
+        }
+
+        .lesson-row:nth-child(1) { animation-delay: 0.04s; }
+        .lesson-row:nth-child(2) { animation-delay: 0.08s; }
+        .lesson-row:nth-child(3) { animation-delay: 0.12s; }
+        .lesson-row:nth-child(4) { animation-delay: 0.16s; }
+        .lesson-row:nth-child(5) { animation-delay: 0.20s; }
+        .lesson-row:nth-child(6) { animation-delay: 0.24s; }
+        .lesson-row:nth-child(7) { animation-delay: 0.28s; }
+        .lesson-row:nth-child(8) { animation-delay: 0.32s; }
+        .lesson-row:nth-child(9) { animation-delay: 0.36s; }
+
+        .lesson-row:hover {
+            transform: translateX(5px);
+            border-color: var(--vibrant-tillian);
+            box-shadow: 0 6px 18px rgba(0, 255, 255, 0.15);
+        }
+
+        .lesson-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+            background: var(--bg-cream);
+            color: var(--charcoal);
+            border: 2px solid #d5d0c5;
+        }
+
+        .lesson-info {
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .lesson-info .lesson-name {
+            font-weight: 800;
+            font-size: 1.05rem;
+        }
+
+        .lesson-info .lesson-topic {
+            font-size: 0.75rem;
+            color: var(--muted-green);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        .lesson-arrow {
+            font-size: 1.2rem;
+            color: #ccc;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+        }
+
+        .lesson-row:hover .lesson-arrow {
+            transform: translateX(4px);
+            color: var(--vibrant-tillian);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 5%;
+            }
+
+            .logo-img {
+                height: 42px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .student-greeting h1 {
+                font-size: 1.4rem;
+            }
+
+            .lesson-row {
+                padding: 13px 16px;
+                gap: 10px;
+            }
+
+            .lesson-number {
+                width: 34px;
+                height: 34px;
+                font-size: 0.85rem;
+            }
+
+            .lesson-info .lesson-name {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/page/index.html" class="logo-frame">
+            <div class="logo-inner">
+                <img src="/images/bm1.png" alt="BM Insights Logo" class="logo-img">
+                <span class="logo-text">BM-INSIGHTS</span>
+            </div>
+        </a>
+    </header>
+
+    <main>
+
+        <div class="student-greeting">
+            <h1>👋 ሰላም,Samson!</h1>
+            <p class="greeting-sub">Pick a lesson and start revising.</p>
+        </div>
+
+        <div class="lesson-list">
+            <a href="/lessons/lesson1.html" class="lesson-row">
+                <div class="lesson-number">1</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">Basic Greetings</div>
+                    <div class="lesson-topic">Vocabulary & Daily Expressions</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+
+            <a href="/lessons/lesson2.html" class="lesson-row">
+                <div class="lesson-number">2</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">Survival Phrases</div>
+                    <div class="lesson-topic">Conversation Basics</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+            
+            <a href="/lessons/lesson3.html" class="lesson-row">
+                <div class="lesson-number">3</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">Well-Being & Family Inquiries</div>
+                    <div class="lesson-topic">Conversation Basics</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+             
+            <a href="/lessons/lesson4.html" class="lesson-row">
+                <div class="lesson-number">4</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">Farewells & Future Actions</div>
+                    <div class="lesson-topic">Conversation Basics</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+            <a href="/lessons/lesson5.html" class="lesson-row">
+                <div class="lesson-number">5</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">Days of the Week</div>
+                    <div class="lesson-topic">Vocabulary & Foundations</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+             <a href="/lessons/lesson6.html" class="lesson-row">
+                <div class="lesson-number">6</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">The 8 Question Words</div>
+                    <div class="lesson-topic">Vocabulary & Foundations</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+            <a href="/lessons/lesson7.html" class="lesson-row">
+                <div class="lesson-number">7</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">(Identity & Origins)</div>
+                    <div class="lesson-topic">Vocabulary & Foundations</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+             <a href="/lessons/lesson8.html" class="lesson-row">
+                <div class="lesson-number">8</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">Interpersonal Feelings</div>
+                    <div class="lesson-topic">Vocabulary & Foundations</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+            <a href="/lessons/lesson9.html" class="lesson-row">
+                <div class="lesson-number">9</div>
+                <div class="lesson-info">
+                    <div class="lesson-name">Coming soon</div>
+                    <div class="lesson-topic">Vocabulary & Foundations</div>
+                </div>
+                <span class="lesson-arrow">→</span>
+            </a>
+
+
+         

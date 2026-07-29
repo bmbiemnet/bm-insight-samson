@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: The 8 Question Words - Tigrinya Mastery</title>
+    <meta name="description" content="Learn the 8 core Tigrinya question words with audio pronunciation, example sentences, and interactive practice.">
+    <link rel="icon" type="png" href="/images/bm1.png">
+    <style>
+        :root {
+            --bg-cream: #fdf3d8;
+            --pale-green: #eaf1eb;
+            --golden-yellow: #fceea7;
+            --muted-green: #8aa38c;
+            --charcoal: #2b2c30;
+            --bright-yellow: #fadc19;
+            --vibrant-tillian: #00ffff;
+            --white: #ffffff;
+            --accent-red: #d30000;
+            --very-green: #2e8b57;
+            --soft-white: #f9f9f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { background-color: var(--bg-cream); color: var(--charcoal); line-height: 1.6; min-height: 100vh; animation: fadeIn 0.5s ease-in; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes flowGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes borderFlow { 0% { background-position: 0% 0%, 0% 50%; } 50% { background-position: 0% 0%, 100% 50%; } 100% { background-position: 0% 0%, 0% 50%; } }
+        @keyframes shake { 0%,100% { transform: translateX(0); } 20%,60% { transform: translateX(-5px); } 40%,80% { transform: translateX(5px); } }
+        @keyframes pulse-cyan { 0% { box-shadow: 0 0 0 0 rgba(0,255,255,0.8); } 70% { box-shadow: 0 0 0 25px rgba(0,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,255,0); } }
+
+        .shake { animation: shake 0.4s ease; }
+
+        .flow-border-white { border: 2px solid transparent !important; background: linear-gradient(var(--white),var(--white)) padding-box, linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian)) border-box; background-size: 100% 100%,300% 300%; animation: borderFlow 6s ease infinite; box-shadow: 0 4px 12px rgba(211,0,0,0.15); }
+
+        .logo-header { text-align: center; padding: 20px 20px 0 20px; }
+        .logo-frame { display: inline-flex; text-decoration: none; background: linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian)); background-size: 300% 300%; animation: flowGradient 6s ease infinite; padding: 4px; border-radius: 16px; box-shadow: 0 4px 15px rgba(211,0,0,0.15); }
+        .logo-inner { display: flex; align-items: center; background-color: var(--bg-cream); border-radius: 12px; }
+        .logo-img { height: 50px; width: auto; object-fit: contain; padding: 4px 8px 4px 12px; display: block; }
+        .logo-text { color: var(--charcoal); font-weight: 900; font-size: 1.2rem; letter-spacing: 1px; padding-right: 15px; }
+
+        main { max-width: 850px; margin: 0 auto; padding: 30px 20px 50px 20px; }
+
+        .lesson-header { text-align: center; margin-bottom: 35px; }
+        .lesson-tag { background: var(--vibrant-tillian); color: var(--charcoal); font-weight: 900; padding: 5px 15px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; border: 2px solid var(--charcoal); font-size: 0.8rem; display: inline-block; margin-bottom: 12px; }
+        .lesson-title { font-size: 2.6rem; font-weight: 900; color: var(--charcoal); margin-bottom: 8px; line-height: 1.2; }
+        .lesson-subtitle { font-size: 1.05rem; color: var(--charcoal); font-weight: 500; }
+
+        .section-heading { text-align: center; margin-bottom: 20px; font-size: 1.6rem; font-weight: 900; color: var(--charcoal); border-bottom: 4px solid var(--vibrant-tillian); display: inline-block; padding-bottom: 4px; }
+        .section-heading-wrap { text-align: center; margin-bottom: 5px; }
+
+        .grammar-list { display: flex; flex-direction: column; gap: 28px; max-width: 700px; margin: 0 auto 40px auto; }
+        .grammar-card { background: var(--white); border: 2px solid #e0dcd0; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.04); transition: all 0.25s ease; }
+        .grammar-card:hover { transform: translateY(-4px); border-color: var(--vibrant-tillian); box-shadow: 0 12px 28px rgba(0,255,255,0.18); }
+        .gc-header { background: var(--pale-green); padding: 18px 20px; text-align: center; border-bottom: 1px solid #eaeaea; }
+        .gc-word-en { font-size: 1.05rem; font-weight: 900; color: var(--muted-green); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+        .gc-word-ti { font-size: 2.2rem; color: var(--accent-red); font-weight: 900; margin-bottom: 4px; line-height: 1.3; }
+        .gc-trans { font-size: 1rem; color: var(--charcoal); font-weight: 700; font-style: italic; }
+        .gc-body { padding: 20px 18px; text-align: center; }
+        .gc-example-label { font-size: 0.8rem; font-weight: 800; color: #999; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+
+        .card-tabs { display: flex; justify-content: center; gap: 6px; margin-bottom: 14px; width: 100%; flex-wrap: wrap; }
+        .tab-btn { background: var(--bg-cream); border: 1px solid #ccc; color: var(--charcoal); padding: 5px 13px; border-radius: 18px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease; }
+        .tab-btn.active { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+        .tab-content { display: none; width: 100%; animation: fadeIn 0.3s ease; }
+        .tab-content.active { display: flex; flex-direction: column; align-items: center; }
+
+        .ex-text-en { font-size: 1.05rem; font-weight: 800; color: var(--charcoal); margin-bottom: 4px; }
+        .ex-text-ti { font-size: 1.5rem; color: var(--accent-red); font-weight: 900; margin-bottom: 4px; line-height: 1.3; }
+        .ex-trans { font-size: 0.95rem; color: var(--muted-green); font-weight: 600; font-style: italic; }
+
+        .audio-group { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 10px; }
+        .audio-btn { border-radius: 50%; width: 46px; height: 46px; display: inline-flex; justify-content: center; align-items: center; font-size: 1.2rem; cursor: pointer; transition: all 0.3s ease; }
+        .audio-btn.flow-border-white:hover { background: linear-gradient(var(--vibrant-tillian),var(--vibrant-tillian)) padding-box, linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian)) border-box; color: var(--charcoal) !important; transform: scale(1.15); }
+        .turtle-btn:hover { background: linear-gradient(var(--very-green),var(--very-green)) padding-box, linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian)) border-box !important; }
+
+        .class-notes { background: var(--soft-white); border-left: 5px solid var(--bright-yellow); padding: 18px 22px; border-radius: 0 12px 12px 0; margin: 30px auto 40px auto; max-width: 700px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .class-notes h3 { color: var(--charcoal); font-size: 1.1rem; margin-bottom: 8px; }
+        .class-notes ul { list-style: none; }
+        .class-notes li { margin-bottom: 8px; font-size: 0.95rem; }
+        .class-notes strong { color: var(--accent-red); }
+
+        .game-section { background: var(--charcoal); border-radius: 18px; padding: 45px 25px; text-align: center; color: var(--white); margin-bottom: 40px; box-shadow: 0 10px 28px rgba(0,0,0,0.18); border-bottom: 5px solid var(--accent-red); }
+        .game-section h2 { font-size: 2rem; color: var(--bright-yellow); margin-bottom: 8px; }
+        .game-section p { font-size: 1rem; margin-bottom: 28px; color: var(--pale-green); }
+
+        .progress-wrapper { width: 100%; max-width: 450px; margin: 0 auto 25px auto; }
+        .progress-text { font-size: 0.9rem; color: var(--white); font-weight: bold; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1.5px; }
+        .progress-container { width: 100%; height: 10px; background: rgba(255,255,255,0.12); border-radius: 10px; overflow: hidden; }
+        .progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg,var(--vibrant-tillian),#00ffcc); border-radius: 10px; transition: width 0.5s ease; box-shadow: 0 0 8px rgba(0,255,255,0.4); }
+
+        .game-audio-btn { background: var(--vibrant-tillian); color: var(--charcoal); font-size: 2.6rem; border-radius: 50%; width: 80px; height: 80px; border: 4px solid var(--white); cursor: pointer; display: inline-flex; justify-content: center; align-items: center; margin-bottom: 25px; transition: transform 0.3s ease; }
+        .game-audio-btn:hover { transform: scale(1.08); }
+        .game-audio-btn.pulse-attention { animation: pulse-cyan 1.5s infinite; }
+
+        .game-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; max-width: 650px; margin: 0 auto; }
+        .game-option { background: var(--white); color: var(--charcoal); font-weight: 800; font-size: 0.95rem; padding: 14px 16px; border-radius: 10px; border: 2px solid transparent; cursor: pointer; transition: all 0.2s ease; }
+        .game-option:hover { transform: translateY(-2px); background: var(--pale-green); border-color: var(--vibrant-tillian); }
+        .game-option.correct { background: var(--vibrant-tillian) !important; border-color: var(--white) !important; color: var(--charcoal) !important; }
+        .game-option.wrong { background: var(--accent-red) !important; color: var(--white) !important; border-color: var(--white) !important; }
+        .feedback-message { font-size: 1.2rem; font-weight: bold; margin-top: 20px; min-height: 28px; }
+
+        .back-wrap { text-align: center; }
+        .back-link { display: inline-block; text-decoration: none; font-weight: 800; padding: 10px 22px; border-radius: 25px; color: var(--charcoal); background: var(--white); border: 2px solid #d5d0c5; transition: all 0.3s ease; font-size: 0.95rem; }
+        .back-link:hover { background: var(--charcoal); color: var(--vibrant-tillian); border-color: var(--charcoal); }
+
+        @media (max-width: 600px) {
+            .lesson-title { font-size: 2rem; }
+            .gc-word-ti { font-size: 1.8rem; }
+            .ex-text-ti { font-size: 1.3rem; }
+            .game-section { padding: 30px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-header">
+        <a href="/page/index.html" class="logo-frame">
+            <div class="logo-inner">
+                <img src="/images/bm1.png" alt="BM Insights Logo" class="logo-img">
+                <span class="logo-text">BM-INSIGHTS</span>
+            </div>
+        </a>
+    </div>
+
+    <main>
+        <div class="lesson-header">
+            <span class="lesson-tag">Grammar & Interrogatives</span>
+            <h1 class="lesson-title">Lesson 5: The 8 Question Words</h1>
+            <p class="lesson-subtitle">Crucial interrogative terms used to construct basic "Wh-" inquiries in Tigrinya.</p>
+        </div>
+
+        <div class="section-heading-wrap">
+            <h2 class="section-heading">Core "Wh-" Words</h2>
+        </div>
+
+        <div class="grammar-list">
+
+            <!-- 1. WHEN -->
+            <div class="grammar-card tabbed-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">WHEN?</div>
+                    <div class="card-tabs" style="margin-top: 8px; margin-bottom: 0;">
+                        <button class="tab-btn active" onclick="switchVariant(this, 'meas-opt')">መዓስ</button>
+                        <button class="tab-btn" onclick="switchVariant(this, 'meyas-opt')">መኣስ</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="tab-content meas-opt active">
+                        <div class="gc-word-ti">መዓስ፧</div>
+                        <div class="gc-trans">(meas?)</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/meaas.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/meaas.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                    <div class="tab-content meyas-opt">
+                        <div class="gc-word-ti">መኣስ</div>
+                        <div class="gc-trans">(meAs?)</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/meAs.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/meAs.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 22px; border-top: 2px solid #eaeaea; padding-top: 18px;">
+                        <div class="gc-example-label">Example Sentence</div>
+                        <div class="card-tabs">
+                            <button class="tab-btn active" onclick="switchVariant(this, 'ex-m')">To Male</button>
+                            <button class="tab-btn" onclick="switchVariant(this, 'ex-f')">To Female</button>
+                        </div>
+                        <div class="tab-content ex-m active">
+                            <div class="ex-text-en">When are you coming?</div>
+                            <div class="ex-text-ti">መዓስ ክትመጽእ ኢኻ፧</div>
+                            <div class="ex-trans">meas kt-metsi ikha?</div>
+                            <div class="audio-group">
+                                <button class="audio-btn flow-border-white" onclick="playAudio('/audio/meas_ktmetsi_ikha.mp3')">🔊</button>
+                                <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/meas_ktmetsi_ikha.mp3', 0.6)">🐢</button>
+                            </div>
+                        </div>
+                        <div class="tab-content ex-f">
+                            <div class="ex-text-en">When are you coming?</div>
+                            <div class="ex-text-ti">መዓስ ክትመጺ ኢኺ፧</div>
+                            <div class="ex-trans">meas kt-metsi ikhi?</div>
+                            <div class="audio-group">
+                                <button class="audio-btn flow-border-white" onclick="playAudio('/audio/meas_ktmetsi_ikhi.mp3')">🔊</button>
+                                <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/meas_ktmetsi_ikhi.mp3', 0.6)">🐢</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. WHERE -->
+            <div class="grammar-card tabbed-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">WHERE?</div>
+                    <div class="gc-word-ti">ኣበይ፧</div>
+                    <div class="gc-trans">(abey?)</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/abey.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/abey.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="gc-example-label">Example Sentence</div>
+                    <div class="card-tabs">
+                        <button class="tab-btn active" onclick="switchVariant(this, 'ex-m')">To Male</button>
+                        <button class="tab-btn" onclick="switchVariant(this, 'ex-f')">To Female</button>
+                    </div>
+                    <div class="tab-content ex-m active">
+                        <div class="ex-text-en">Where are you?</div>
+                        <div class="ex-text-ti">ኣበይ ኣለኻ፧</div>
+                        <div class="ex-trans">abey alekha?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/abey_alekha.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/abey_alekha.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                    <div class="tab-content ex-f">
+                        <div class="ex-text-en">Where are you?</div>
+                        <div class="ex-text-ti">ኣበይ ኣለኺ፧</div>
+                        <div class="ex-trans">abey alekhi?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/abey_alekhi.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/abey_alekhi.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. WHY -->
+            <div class="grammar-card tabbed-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">WHY?</div>
+                    <div class="gc-word-ti">ስለምንታይ፧</div>
+                    <div class="gc-trans">(slemintay?)</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/slemintay.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/slemintay.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="gc-example-label">Example Sentence</div>
+                    <div class="card-tabs">
+                        <button class="tab-btn active" onclick="switchVariant(this, 'ex-m')">To Male</button>
+                        <button class="tab-btn" onclick="switchVariant(this, 'ex-f')">To Female</button>
+                    </div>
+                    <div class="tab-content ex-m active">
+                        <div class="ex-text-en">Why are you laughing?</div>
+                        <div class="ex-text-ti">ስለምንታይ ትስሕቕ ኣለኻ፧</div>
+                        <div class="ex-trans">slemintay tisihq alekha?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/slemintay_m.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/slemintay_m.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                    <div class="tab-content ex-f">
+                        <div class="ex-text-en">Why are you laughing?</div>
+                        <div class="ex-text-ti">ስለምንታይ ትስሕቂ ኣለኺ፧</div>
+                        <div class="ex-trans">slemintay tisihqi alekhi?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/slemintay_f.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/slemintay_f.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. WHO -->
+            <div class="grammar-card tabbed-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">WHO?</div>
+                    <div class="gc-word-ti">መን፧</div>
+                    <div class="gc-trans">(men?)</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/men.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/men.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="gc-example-label">Example Sentence</div>
+                    <div class="card-tabs">
+                        <button class="tab-btn active" onclick="switchVariant(this, 'ex-m')">To Male</button>
+                        <button class="tab-btn" onclick="switchVariant(this, 'ex-f')">To Female</button>
+                    </div>
+                    <div class="tab-content ex-m active">
+                        <div class="ex-text-en">Who are you?</div>
+                        <div class="ex-text-ti">መን ኢኻ፧</div>
+                        <div class="ex-trans">men ikha?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/men_ikha.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/men_ikha.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                    <div class="tab-content ex-f">
+                        <div class="ex-text-en">Who are you?</div>
+                        <div class="ex-text-ti">መን ኢኺ፧</div>
+                        <div class="ex-trans">men ikhi?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/men_ikhi.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/men_ikhi.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. WHAT -->
+            <div class="grammar-card tabbed-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">WHAT?</div>
+                    <div class="gc-word-ti">እንታይ፧</div>
+                    <div class="gc-trans">(entay?)</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/entay.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/entay.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="gc-example-label">Example Sentence</div>
+                    <div class="card-tabs">
+                        <button class="tab-btn active" onclick="switchVariant(this, 'ex-m')">To Male</button>
+                        <button class="tab-btn" onclick="switchVariant(this, 'ex-f')">To Female</button>
+                    </div>
+                    <div class="tab-content ex-m active">
+                        <div class="ex-text-en">What are you doing?</div>
+                        <div class="ex-text-ti">እንታይ ትገብር ኣለኻ፧</div>
+                        <div class="ex-trans">entay tigebr alekha?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/entay_m.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/entay_m.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                    <div class="tab-content ex-f">
+                        <div class="ex-text-en">What are you doing?</div>
+                        <div class="ex-text-ti">እንታይ ትገብሪ ኣለኺ፧</div>
+                        <div class="ex-trans">entay tigebri alekhi?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/entay_f.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/entay_f.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. WHICH -->
+            <div class="grammar-card tabbed-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">WHICH?</div>
+                    <div class="gc-word-ti">ኣየናይ፧</div>
+                    <div class="gc-trans">(ayenay?)</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/ayenay.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/ayenay.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="gc-example-label">Example Sentence</div>
+                    <div class="card-tabs">
+                        <button class="tab-btn active" onclick="switchVariant(this, 'ex-m')">To Male</button>
+                        <button class="tab-btn" onclick="switchVariant(this, 'ex-f')">To Female</button>
+                    </div>
+                    <div class="tab-content ex-m active">
+                        <div class="ex-text-en">Which one is yours?</div>
+                        <div class="ex-text-ti">ኣየናይ ኢዩ ናትካ፧</div>
+                        <div class="ex-trans">ayenay iyu natka?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/ayenay_m.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/ayenay_m.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                    <div class="tab-content ex-f">
+                        <div class="ex-text-en">Which one is yours?</div>
+                        <div class="ex-text-ti">ኣየናይ ኢዩ ናትኪ፧</div>
+                        <div class="ex-trans">ayenay iyu natki?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/ayenay_f.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/ayenay_f.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. HOW -->
+            <div class="grammar-card tabbed-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">HOW?</div>
+                    <div class="gc-word-ti">ከመይ፧</div>
+                    <div class="gc-trans">(kemey?)</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kemey.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kemey.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="gc-example-label">Example Sentence</div>
+                    <div class="card-tabs">
+                        <button class="tab-btn active" onclick="switchVariant(this, 'ex-m')">To Male</button>
+                        <button class="tab-btn" onclick="switchVariant(this, 'ex-f')">To Female</button>
+                    </div>
+                    <div class="tab-content ex-m active">
+                        <div class="ex-text-en">How are you?</div>
+                        <div class="ex-text-ti">ከመይ ኣለኻ፧</div>
+                        <div class="ex-trans">kemey alekha?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kemeyalekha.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kemeyalekha.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                    <div class="tab-content ex-f">
+                        <div class="ex-text-en">How are you?</div>
+                        <div class="ex-text-ti">ከመይ ኣለኺ፧</div>
+                        <div class="ex-trans">kemey alekhi?</div>
+                        <div class="audio-group">
+                            <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kemeyalekhi.mp3')">🔊</button>
+                            <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kemeyalekhi.mp3', 0.6)">🐢</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. HOW MUCH -->
+            <div class="grammar-card">
+                <div class="gc-header">
+                    <div class="gc-word-en">HOW MUCH?</div>
+                    <div class="gc-word-ti">ክንደይ፧</div>
+                    <div class="gc-trans">(kindey?)</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kindey.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kindey.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="gc-body">
+                    <div class="gc-example-label">Example Sentence</div>
+                    <div class="ex-text-en">How much is it?</div>
+                    <div class="ex-text-ti">ክንደይ'ዩ፧</div>
+                    <div class="ex-trans">kindey iyu?</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kindey_ex.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kindey_ex.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="class-notes">
+            <h3>💡 Grammar Insight: Placing Question Words & Pronouns</h3>
+            <ul>
+                <li>In Tigrinya, question words usually come right before the verb or at the very beginning of the sentence.</li>
+                <li><strong>Important:</strong> Notice how the verb ending changes whether you are speaking to a male (e.g., <em>ኣለኻ / alekha</em>) or a female (e.g., <em>ኣለኺ / alekhi</em>)!</li>
+            </ul>
+        </div>
+
+        <!-- GAME -->
+        <div class="game-section">
+            <h2>Test Your Listening</h2>
+            <p>Click play to hear a question word, then select the matching English translation!</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-text" id="progress-text">0 / 8 Mastered</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="game-progress-bar"></div>
+                </div>
+            </div>
+
+            <button id="game-main-audio" class="game-audio-btn" onclick="playGameAudio()">🔊</button>
+            <div class="game-options-grid" id="game-options-container"></div>
+            <div id="game-feedback" class="feedback-message"></div>
+        </div>
+
+        <div class="back-wrap">
+            <a href="/page/index.html" class="back-link">← Back to Lessons</a>
+        </div>
+    </main>
+
+    <script>
+        function switchVariant(btn, target) {
+            const card = btn.closest('.tabbed-card');
+            card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            card.querySelector(`.tab-content.${target}`).classList.add('active');
+        }
+
+        function playAudio(url, speed = 1.0) {
+            const a = new Audio(url);
+            a.playbackRate = speed;
+            a.play().catch(() => {});
+        }
+
+        const lessonVocabulary = [
+            { english: "WHEN?", audio: "/audio/meaas.mp3" },
+            { english: "WHERE?", audio: "/audio/abey.mp3" },
+            { english: "WHY?", audio: "/audio/slemintay.mp3" },
+            { english: "WHO?", audio: "/audio/men.mp3" },
+            { english: "WHAT?", audio: "/audio/entay.mp3" },
+            { english: "WHICH?", audio: "/audio/ayenay.mp3" },
+            { english: "HOW?", audio: "/audio/kemey.mp3" },
+            { english: "HOW MUCH?", audio: "/audio/kindey.mp3" }
+        ];
+
+        let deck = [];
+        let currentAnswer = {};
+        let currentAudio = null;
+
+        function startGame() {
+            deck = [...lessonVocabulary];
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const fb = document.getElementById('game-feedback');
+            const cont = document.getElementById('game-options-container');
+            const total = lessonVocabulary.length;
+            const done = total - deck.length;
+
+            document.getElementById('game-progress-bar').style.width = (done / total) * 100 + '%';
+            document.getElementById('progress-text').innerText = `${done} / ${total} Mastered`;
+
+            if (deck.length === 0) {
+                cont.innerHTML = "";
+                document.getElementById('game-main-audio').style.display = "none";
+                fb.innerHTML = "🏆 You mastered the 8 Core Question Words!<br><br><button onclick='location.reload()' style='padding:10px 20px;border-radius:20px;font-weight:700;cursor:pointer;background:#fff;border:none;'>Play Again 🔄</button>";
+                fb.style.color = "var(--bright-yellow)";
+                return;
+            }
+
+            fb.innerText = "";
+            document.getElementById('game-main-audio').classList.add('pulse-attention');
+            cont.innerHTML = "";
+
+            const shuffled = [...deck].sort(() => Math.random() - 0.5);
+            currentAnswer = shuffled[0];
+            const wrongs = lessonVocabulary.filter(w => w.english !== currentAnswer.english).sort(() => Math.random() - 0.5).slice(0, 2);
+            const options = [currentAnswer, ...wrongs].sort(() => Math.random() - 0.5);
+
+            options.forEach(opt => {
+                const b = document.createElement("button");
+                b.className = "game-option";
+                b.innerText = opt.english;
+                b.onclick = () => checkAnswer(b, opt.english);
+                cont.appendChild(b);
+            });
+        }
+
+        function playGameAudio() {
+            document.getElementById('game-main-audio').classList.remove('pulse-attention');
+            if (currentAnswer.audio) {
+                if (currentAudio) { currentAudio.pause(); currentAudio.currentTime = 0; }
+                currentAudio = new Audio(currentAnswer.audio);
+                currentAudio.play();
+            }
+        }
+
+        function checkAnswer(btn, selected) {
+            const fb = document.getElementById('game-feedback');
+            if (fb.innerText.includes("Correct")) return;
+            if (selected === currentAnswer.english) {
+                btn.classList.add("correct");
+                fb.innerText = "Correct! 🎉";
+                fb.style.color = "var(--vibrant-tillian)";
+                deck = deck.filter(w => w.english !== currentAnswer.english);
+                setTimeout(loadQuestion, 1400);
+            } else {
+                btn.classList.add("wrong", "shake");
+                fb.innerText = "Try again!";
+                fb.style.color = "var(--accent-red)";
+                setTimeout(() => btn.classList.remove("shake"), 400);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", startGame);
+    </script>
+</body>
+</html>
