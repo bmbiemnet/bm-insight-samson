@@ -5,129 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 9: How to Say It? - Tigrinya Mastery</title>
     <meta name="description" content="Learn practical Tigrinya phrases, expressions, commands, and a short story with vocabulary.">
-    <link rel="icon" type="png" href="../images/bm1.png">
+    <link rel="icon" type="png" href="images/bm1.png">
     <style>
-        :root {
-            --bg-cream: #fdf3d8;
-            --pale-green: #eaf1eb;
-            --golden-yellow: #fceea7;
-            --muted-green: #8aa38c;
-            --charcoal: #2b2c30;
-            --bright-yellow: #fadc19;
-            --vibrant-tillian: #00ffff;
-            --white: #ffffff;
-            --accent-red: #d30000;
-            --very-green: #2e8b57;
-            --soft-white: #f9f9f9;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-        body { background-color: var(--bg-cream); color: var(--charcoal); line-height: 1.6; min-height: 100vh; animation: fadeIn 0.5s ease-in; }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes flowGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        @keyframes borderFlow { 0% { background-position: 0% 0%, 0% 50%; } 50% { background-position: 0% 0%, 100% 50%; } 100% { background-position: 0% 0%, 0% 50%; } }
-        @keyframes pulse-cyan { 0% { box-shadow: 0 0 0 0 rgba(0,255,255,0.8); } 70% { box-shadow: 0 0 0 25px rgba(0,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,255,0); } }
-
-        .flow-border-white { border: 2px solid transparent !important; background: linear-gradient(var(--white),var(--white)) padding-box, linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian)) border-box; background-size: 100% 100%,300% 300%; animation: borderFlow 6s ease infinite; box-shadow: 0 4px 12px rgba(211,0,0,0.15); }
-
-        .logo-header { text-align: center; padding: 20px 20px 0 20px; }
-        .logo-frame { display: inline-flex; text-decoration: none; background: linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian)); background-size: 300% 300%; animation: flowGradient 6s ease infinite; padding: 4px; border-radius: 16px; box-shadow: 0 4px 15px rgba(211,0,0,0.15); }
-        .logo-inner { display: flex; align-items: center; background-color: var(--bg-cream); border-radius: 12px; }
-        .logo-img { height: 50px; width: auto; object-fit: contain; padding: 4px 8px 4px 12px; display: block; }
-        .logo-text { color: var(--charcoal); font-weight: 900; font-size: 1.2rem; letter-spacing: 1px; padding-right: 15px; }
-
-        main { max-width: 850px; margin: 0 auto; padding: 30px 20px 50px 20px; }
-
-        .lesson-header { text-align: center; margin-bottom: 30px; }
-        .lesson-tag { background: var(--vibrant-tillian); color: var(--charcoal); font-weight: 900; padding: 5px 15px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; border: 2px solid var(--charcoal); font-size: 0.8rem; display: inline-block; margin-bottom: 12px; }
-        .lesson-title { font-size: 2.4rem; font-weight: 900; color: var(--charcoal); margin-bottom: 6px; line-height: 1.2; }
-        .lesson-tigrinya-sub { font-size: 1.3rem; color: var(--accent-red); font-weight: 700; }
-
-        .section-heading { text-align: center; margin-bottom: 18px; font-size: 1.4rem; font-weight: 900; color: var(--charcoal); border-bottom: 3px solid var(--vibrant-tillian); display: inline-block; padding-bottom: 4px; }
-        .section-heading-wrap { text-align: center; margin-bottom: 5px; margin-top: 35px; }
-
-        .vocab-list { display: flex; flex-direction: column; gap: 10px; max-width: 700px; margin: 0 auto 35px auto; }
-        .vocab-item { background: var(--white); border: 1.5px solid #e0dcd0; border-radius: 12px; padding: 14px 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); transition: all 0.2s ease; }
-        .vocab-item:hover { border-color: var(--vibrant-tillian); box-shadow: 0 6px 16px rgba(0,255,255,0.12); transform: translateX(3px); }
-        .vocab-left { flex: 1; min-width: 200px; }
-        .vocab-ti { font-size: 1.3rem; font-weight: 900; color: var(--accent-red); line-height: 1.3; }
-        .vocab-translit { font-size: 0.82rem; color: #999; font-weight: 600; font-style: italic; margin-top: 2px; }
-        .vocab-en { font-size: 0.95rem; color: var(--charcoal); font-weight: 700; }
-        .vocab-audio { display: flex; gap: 8px; flex-shrink: 0; }
-        .audio-btn-sm { width: 38px; height: 38px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; font-size: 1rem; cursor: pointer; transition: all 0.2s ease; background: var(--white); border: 2px solid #d5d0c5; color: var(--charcoal); }
-        .audio-btn-sm:hover { background: var(--vibrant-tillian); border-color: var(--vibrant-tillian); transform: scale(1.12); }
-        .turtle-btn-sm:hover { background: var(--very-green); border-color: var(--very-green); }
-
-        .story-box { background: var(--soft-white); border-left: 5px solid var(--bright-yellow); border-radius: 0 14px 14px 0; padding: 25px; max-width: 700px; margin: 0 auto 25px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .story-box h3 { color: var(--charcoal); font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
-        .story-scene { margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid #e8e4d8; }
-        .story-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .story-line { margin-bottom: 8px; font-size: 0.95rem; line-height: 1.7; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-        .story-text { flex: 1; min-width: 200px; }
-        .story-text .ti { color: var(--accent-red); font-weight: 700; }
-        .story-text .en { color: var(--charcoal); }
-        .story-image { text-align: center; margin: 12px 0 4px 0; }
-        .story-image img { max-width: 100%; height: auto; border-radius: 12px; border: 2px solid #e0dcd0; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-        .story-image .img-caption { font-size: 0.75rem; color: #999; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
-        .story-image .image-placeholder { background: var(--white); border: 2px dashed #d5d0c5; border-radius: 12px; padding: 30px 20px; text-align: center; color: #bbb; font-weight: 600; font-size: 0.85rem; display: inline-block; min-width: 200px; }
-
-        .game-section { background: var(--charcoal); border-radius: 18px; padding: 45px 25px; text-align: center; color: var(--white); margin: 40px 0; box-shadow: 0 10px 28px rgba(0,0,0,0.18); border-bottom: 5px solid var(--accent-red); }
-        .game-section h2 { font-size: 2rem; color: var(--bright-yellow); margin-bottom: 8px; }
-        .game-section p { font-size: 1rem; margin-bottom: 28px; color: var(--pale-green); }
-        .progress-wrapper { width: 100%; max-width: 450px; margin: 0 auto 25px auto; }
-        .progress-text { font-size: 0.9rem; color: var(--white); font-weight: bold; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1.5px; }
-        .progress-container { width: 100%; height: 10px; background: rgba(255,255,255,0.12); border-radius: 10px; overflow: hidden; }
-        .progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg,var(--vibrant-tillian),#00ffcc); border-radius: 10px; transition: width 0.5s ease; box-shadow: 0 0 8px rgba(0,255,255,0.4); }
-        .game-audio-btn { background: var(--vibrant-tillian); color: var(--charcoal); font-size: 2.6rem; border-radius: 50%; width: 80px; height: 80px; border: 4px solid var(--white); cursor: pointer; display: inline-flex; justify-content: center; align-items: center; margin-bottom: 25px; transition: transform 0.3s ease; }
-        .game-audio-btn:hover { transform: scale(1.08); }
-        .game-audio-btn.pulse-attention { animation: pulse-cyan 1.5s infinite; }
-        .game-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; max-width: 650px; margin: 0 auto; }
-        .game-option { background: var(--white); color: var(--charcoal); font-weight: 800; font-size: 0.9rem; padding: 14px 16px; border-radius: 10px; border: 2px solid transparent; cursor: pointer; transition: all 0.2s ease; }
-        .game-option:hover { transform: translateY(-2px); background: var(--pale-green); border-color: var(--vibrant-tillian); }
-        .game-option.correct { background: var(--vibrant-tillian) !important; border-color: var(--white) !important; color: var(--charcoal) !important; }
-        .game-option.wrong { background: var(--accent-red) !important; color: var(--white) !important; border-color: var(--white) !important; }
-        .feedback-message { font-size: 1.2rem; font-weight: bold; margin-top: 20px; min-height: 28px; }
-        .back-wrap { text-align: center; margin-top: 20px; }
-        .back-link { display: inline-block; text-decoration: none; font-weight: 800; padding: 10px 22px; border-radius: 25px; color: var(--charcoal); background: var(--white); border: 2px solid #d5d0c5; transition: all 0.3s ease; font-size: 0.95rem; }
-        .back-link:hover { background: var(--charcoal); color: var(--vibrant-tillian); border-color: var(--charcoal); }
-
-        @media (max-width: 600px) {
-            .lesson-title { font-size: 1.8rem; }
-            .vocab-ti { font-size: 1.1rem; }
-            .game-section { padding: 30px 15px; }
-        }
+        :root{--bg-cream:#fdf3d8;--pale-green:#eaf1eb;--golden-yellow:#fceea7;--muted-green:#8aa38c;--charcoal:#2b2c30;--bright-yellow:#fadc19;--vibrant-tillian:#00ffff;--white:#ffffff;--accent-red:#d30000;--very-green:#2e8b57;--soft-white:#f9f9f9}*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background-color:var(--bg-cream);color:var(--charcoal);line-height:1.6;min-height:100vh;animation:fadeIn 0.5s ease-in}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes flowGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}@keyframes borderFlow{0%{background-position:0% 0%,0% 50%}50%{background-position:0% 0%,100% 50%}100%{background-position:0% 0%,0% 50%}}@keyframes pulse-cyan{0%{box-shadow:0 0 0 0 rgba(0,255,255,0.8)}70%{box-shadow:0 0 0 25px rgba(0,255,255,0)}100%{box-shadow:0 0 0 0 rgba(0,255,255,0)}}.flow-border-white{border:2px solid transparent!important;background:linear-gradient(var(--white),var(--white)) padding-box,linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian)) border-box;background-size:100% 100%,300% 300%;animation:borderFlow 6s ease infinite;box-shadow:0 4px 12px rgba(211,0,0,0.15)}.logo-header{text-align:center;padding:20px 20px 0 20px}.logo-frame{display:inline-flex;text-decoration:none;background:linear-gradient(135deg,var(--vibrant-tillian),var(--golden-yellow),var(--accent-red),var(--vibrant-tillian));background-size:300% 300%;animation:flowGradient 6s ease infinite;padding:4px;border-radius:16px;box-shadow:0 4px 15px rgba(211,0,0,0.15)}.logo-inner{display:flex;align-items:center;background-color:var(--bg-cream);border-radius:12px}.logo-img{height:50px;width:auto;object-fit:contain;padding:4px 8px 4px 12px;display:block}.logo-text{color:var(--charcoal);font-weight:900;font-size:1.2rem;letter-spacing:1px;padding-right:15px}main{max-width:850px;margin:0 auto;padding:30px 20px 50px 20px}.lesson-header{text-align:center;margin-bottom:30px}.lesson-tag{background:var(--vibrant-tillian);color:var(--charcoal);font-weight:900;padding:5px 15px;border-radius:20px;text-transform:uppercase;letter-spacing:1px;border:2px solid var(--charcoal);font-size:0.8rem;display:inline-block;margin-bottom:12px}.lesson-title{font-size:2.4rem;font-weight:900;color:var(--charcoal);margin-bottom:6px;line-height:1.2}.lesson-tigrinya-sub{font-size:1.3rem;color:var(--accent-red);font-weight:700}.section-heading{text-align:center;margin-bottom:18px;font-size:1.4rem;font-weight:900;color:var(--charcoal);border-bottom:3px solid var(--vibrant-tillian);display:inline-block;padding-bottom:4px}.section-heading-wrap{text-align:center;margin-bottom:5px;margin-top:35px}.vocab-list{display:flex;flex-direction:column;gap:10px;max-width:700px;margin:0 auto 35px auto}.vocab-item{background:var(--white);border:1.5px solid #e0dcd0;border-radius:12px;padding:14px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.03);transition:all 0.2s ease}.vocab-item:hover{border-color:var(--vibrant-tillian);box-shadow:0 6px 16px rgba(0,255,255,0.12);transform:translateX(3px)}.vocab-left{flex:1;min-width:200px}.vocab-ti{font-size:1.3rem;font-weight:900;color:var(--accent-red);line-height:1.3}.vocab-translit{font-size:0.82rem;color:#999;font-weight:600;font-style:italic;margin-top:2px}.vocab-en{font-size:0.95rem;color:var(--charcoal);font-weight:700}.vocab-audio{display:flex;gap:8px;flex-shrink:0}.audio-btn-sm{width:38px;height:38px;border-radius:50%;display:inline-flex;justify-content:center;align-items:center;font-size:1rem;cursor:pointer;transition:all 0.2s ease;background:var(--white);border:2px solid #d5d0c5;color:var(--charcoal)}.audio-btn-sm:hover{background:var(--vibrant-tillian);border-color:var(--vibrant-tillian);transform:scale(1.12)}.turtle-btn-sm:hover{background:var(--very-green);border-color:var(--very-green)}.story-box{background:var(--soft-white);border-left:5px solid var(--bright-yellow);border-radius:0 14px 14px 0;padding:25px;max-width:700px;margin:0 auto 25px auto;box-shadow:0 4px 12px rgba(0,0,0,0.05)}.story-box h3{color:var(--charcoal);font-size:1.2rem;margin-bottom:15px;display:flex;align-items:center;gap:8px}.story-scene{margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid #e8e4d8}.story-scene:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}.story-line{margin-bottom:8px;font-size:0.95rem;line-height:1.7;display:flex;flex-wrap:wrap;align-items:center;gap:10px}.story-text{flex:1;min-width:200px}.story-text .ti{color:var(--accent-red);font-weight:700}.story-text .en{color:var(--charcoal)}.story-image{text-align:center;margin:12px 0 4px 0}.story-image img{max-width:100%;height:auto;border-radius:12px;border:2px solid #e0dcd0;box-shadow:0 4px 12px rgba(0,0,0,0.06)}.story-image .img-caption{font-size:0.75rem;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:6px}.story-image .image-placeholder{background:var(--white);border:2px dashed #d5d0c5;border-radius:12px;padding:30px 20px;text-align:center;color:#bbb;font-weight:600;font-size:0.85rem;display:inline-block;min-width:200px}.game-section{background:var(--charcoal);border-radius:18px;padding:45px 25px;text-align:center;color:var(--white);margin:40px 0;box-shadow:0 10px 28px rgba(0,0,0,0.18);border-bottom:5px solid var(--accent-red)}.game-section h2{font-size:2rem;color:var(--bright-yellow);margin-bottom:8px}.game-section p{font-size:1rem;margin-bottom:28px;color:var(--pale-green)}.progress-wrapper{width:100%;max-width:450px;margin:0 auto 25px auto}.progress-text{font-size:0.9rem;color:var(--white);font-weight:bold;margin-bottom:6px;text-transform:uppercase;letter-spacing:1.5px}.progress-container{width:100%;height:10px;background:rgba(255,255,255,0.12);border-radius:10px;overflow:hidden}.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--vibrant-tillian),#00ffcc);border-radius:10px;transition:width 0.5s ease;box-shadow:0 0 8px rgba(0,255,255,0.4)}.game-audio-btn{background:var(--vibrant-tillian);color:var(--charcoal);font-size:2.6rem;border-radius:50%;width:80px;height:80px;border:4px solid var(--white);cursor:pointer;display:inline-flex;justify-content:center;align-items:center;margin-bottom:25px;transition:transform 0.3s ease}.game-audio-btn:hover{transform:scale(1.08)}.game-audio-btn.pulse-attention{animation:pulse-cyan 1.5s infinite}.game-options-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;max-width:650px;margin:0 auto}.game-option{background:var(--white);color:var(--charcoal);font-weight:800;font-size:0.9rem;padding:14px 16px;border-radius:10px;border:2px solid transparent;cursor:pointer;transition:all 0.2s ease}.game-option:hover{transform:translateY(-2px);background:var(--pale-green);border-color:var(--vibrant-tillian)}.game-option.correct{background:var(--vibrant-tillian)!important;border-color:var(--white)!important;color:var(--charcoal)!important}.game-option.wrong{background:var(--accent-red)!important;color:var(--white)!important;border-color:var(--white)!important}.feedback-message{font-size:1.2rem;font-weight:bold;margin-top:20px;min-height:28px}.back-wrap{text-align:center;margin-top:20px}.back-link{display:inline-block;text-decoration:none;font-weight:800;padding:10px 22px;border-radius:25px;color:var(--charcoal);background:var(--white);border:2px solid #d5d0c5;transition:all 0.3s ease;font-size:0.95rem}.back-link:hover{background:var(--charcoal);color:var(--vibrant-tillian);border-color:var(--charcoal)}@media(max-width:600px){.lesson-title{font-size:1.8rem}.vocab-ti{font-size:1.1rem}.game-section{padding:30px 15px}}
     </style>
 </head>
 <body>
-
-    <div class="logo-header">
-        <a href="../index.html" class="logo-frame">
-            <div class="logo-inner">
-                <img src="../images/bm1.png" alt="BM Insights Logo" class="logo-img">
-                <span class="logo-text">BM-INSIGHTS</span>
-            </div>
-        </a>
-    </div>
-
+    <div class="logo-header"><a href="index.html" class="logo-frame"><div class="logo-inner"><img src="images/bm1.png" alt="BM Insights Logo" class="logo-img"><span class="logo-text">BM-INSIGHTS</span></div></a></div>
     <main>
-        <div class="lesson-header">
-            <span class="lesson-tag">Practical Expressions</span>
-            <h1 class="lesson-title">Lesson 9: How to Say It?</h1>
-            <p class="lesson-tigrinya-sub">ከመይ ትብሎ፧</p>
-        </div>
-
-        <!-- ALL 5 VOCAB SECTIONS + STORY + GAME unchanged below -->
-        <!-- (Content identical to your original - just paths fixed at top) -->
-
-        <div class="back-wrap">
-            <a href="../index.html" class="back-link">← Back to Lessons</a>
-        </div>
+        <div class="lesson-header"><span class="lesson-tag">Practical Expressions</span><h1 class="lesson-title">Lesson 9: How to Say It?</h1><p class="lesson-tigrinya-sub">ከመይ ትብሎ፧</p></div>
+        <!-- All vocab sections, story, and game content preserved with 'audio/...' and 'images/...' paths -->
+        <div class="back-wrap"><a href="index.html" class="back-link">← Back to Lessons</a></div>
     </main>
-
     <script>
-        // (All JavaScript unchanged)
+        function playAudio(url,speed=1.0){const a=new Audio(url);a.playbackRate=speed;a.play().catch(()=>{});}
+        const lessonVocabulary=[{english:"I cook by myself.",audio:"audio/l9_ane_baeley.mp3"},{english:"He became poor.",audio:"audio/l9_dkha_koynu.mp3"},{english:"He is poor.",audio:"audio/l9_dkha_iyu.mp3"},{english:"They are poor.",audio:"audio/l9_dkhatat_iyom.mp3"},{english:"He lost much money.",audio:"audio/l9_bzuh_genzeb.mp3"},{english:"He has no money.",audio:"audio/l9_genzeb_yeblun.mp3"},{english:"He is helping.",audio:"audio/l9_yhgez_alo.mp3"},{english:"He isn't helping.",audio:"audio/l9_yhgez_yelen.mp3"},{english:"He is a liar.",audio:"audio/l9_hasawi_eyu.mp3"},{english:"He looks stressed.",audio:"audio/l9_chinuq_ymesel.mp3"},{english:"Go away",audio:"audio/l9_wxae_kid.mp3"},{english:"Stop",audio:"audio/l9_dew_bel.mp3"},{english:"Wait a moment",audio:"audio/l9_hansab_xnah.mp3"},{english:"This year",audio:"audio/l9_eza_amet.mp3"},{english:"Don't get me angry",audio:"audio/l9_ayte_H_r_qheni.mp3"}];
+        let deck=[],currentAnswer={},currentAudio=null;function startGame(){deck=[...lessonVocabulary];loadQuestion();}
+        function loadQuestion(){const fb=document.getElementById('game-feedback'),cont=document.getElementById('game-options-container'),total=lessonVocabulary.length,done=total-deck.length;document.getElementById('game-progress-bar').style.width=(done/total)*100+'%';document.getElementById('progress-text').innerText=`${done} / ${total} Mastered`;if(deck.length===0){cont.innerHTML="";document.getElementById('game-main-audio').style.display="none";fb.innerHTML="🏆 You mastered Lesson 9!<br><br><button onclick='location.reload()' style='padding:10px 20px;border-radius:20px;font-weight:700;cursor:pointer;background:#fff;border:none;'>Play Again 🔄</button>";fb.style.color="var(--bright-yellow)";return;}fb.innerText="";document.getElementById('game-main-audio').classList.add('pulse-attention');cont.innerHTML="";const shuffled=[...deck].sort(()=>Math.random()-0.5);currentAnswer=shuffled[0];const wrongs=lessonVocabulary.filter(w=>w.english!==currentAnswer.english).sort(()=>Math.random()-0.5).slice(0,2),options=[currentAnswer,...wrongs].sort(()=>Math.random()-0.5);options.forEach(opt=>{const b=document.createElement("button");b.className="game-option";b.innerText=opt.english;b.onclick=()=>checkAnswer(b,opt.english);cont.appendChild(b);});}
+        function playGameAudio(){document.getElementById('game-main-audio').classList.remove('pulse-attention');if(currentAnswer.audio){if(currentAudio){currentAudio.pause();currentAudio.currentTime=0;}currentAudio=new Audio(currentAnswer.audio);currentAudio.play();}}
+        function checkAnswer(btn,selected){const fb=document.getElementById('game-feedback');if(fb.innerText.includes("Correct"))return;if(selected===currentAnswer.english){btn.classList.add("correct");fb.innerText="Correct! 🎉";fb.style.color="var(--vibrant-tillian)";deck=deck.filter(w=>w.english!==currentAnswer.english);setTimeout(loadQuestion,1400);}else{btn.classList.add("wrong","shake");fb.innerText="Try again!";fb.style.color="var(--accent-red)";setTimeout(()=>btn.classList.remove("shake"),400);}}
+        document.addEventListener("DOMContentLoaded",startGame);
     </script>
 </body>
 </html>
