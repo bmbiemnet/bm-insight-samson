@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Farewells & Actions - Tigrinya Mastery</title>
+    <meta name="description" content="Learn how to say goodbye, make future plans, and use time expressions in Tigrinya.">
+    <link rel="icon" type="png" href="/images/bm1.png">
+    <style>
+        :root {
+            --bg-cream: #fdf3d8;
+            --pale-green: #eaf1eb;
+            --golden-yellow: #fceea7;
+            --muted-green: #8aa38c;
+            --charcoal: #2b2c30;
+            --bright-yellow: #fadc19;
+            --vibrant-tillian: #00ffff;
+            --white: #ffffff;
+            --accent-red: #d30000;
+            --very-green: #2e8b57;
+            --soft-white: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            min-height: 100vh;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes flowGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes borderFlow {
+            0% { background-position: 0% 0%, 0% 50%; }
+            50% { background-position: 0% 0%, 100% 50%; }
+            100% { background-position: 0% 0%, 0% 50%; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.8); }
+            70% { box-shadow: 0 0 0 25px rgba(0, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
+        }
+
+        .shake { animation: shake 0.4s ease; }
+
+        .flow-border-white {
+            border: 2px solid transparent !important;
+            background: linear-gradient(var(--white), var(--white)) padding-box,
+                        linear-gradient(135deg, var(--vibrant-tillian), var(--golden-yellow), var(--accent-red), var(--vibrant-tillian)) border-box;
+            background-size: 100% 100%, 300% 300%;
+            animation: borderFlow 6s ease infinite;
+            box-shadow: 0 4px 12px rgba(211, 0, 0, 0.15);
+        }
+
+        .logo-header { text-align: center; padding: 20px 20px 0 20px; }
+
+        .logo-frame {
+            display: inline-flex; text-decoration: none;
+            background: linear-gradient(135deg, var(--vibrant-tillian), var(--golden-yellow), var(--accent-red), var(--vibrant-tillian));
+            background-size: 300% 300%; animation: flowGradient 6s ease infinite;
+            padding: 4px; border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(211, 0, 0, 0.15);
+        }
+
+        .logo-inner { display: flex; align-items: center; background-color: var(--bg-cream); border-radius: 12px; }
+        .logo-img { height: 50px; width: auto; object-fit: contain; padding: 4px 8px 4px 12px; display: block; }
+        .logo-text { color: var(--charcoal); font-weight: 900; font-size: 1.2rem; letter-spacing: 1px; padding-right: 15px; }
+
+        main { max-width: 850px; margin: 0 auto; padding: 30px 20px 50px 20px; }
+
+        .lesson-header { text-align: center; margin-bottom: 35px; }
+        .lesson-tag { background: var(--vibrant-tillian); color: var(--charcoal); font-weight: 900; padding: 5px 15px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; border: 2px solid var(--charcoal); font-size: 0.8rem; display: inline-block; margin-bottom: 12px; }
+        .lesson-title { font-size: 2.6rem; font-weight: 900; color: var(--charcoal); margin-bottom: 8px; line-height: 1.2; }
+        .lesson-subtitle { font-size: 1.05rem; color: var(--charcoal); font-weight: 500; }
+
+        .section-heading { text-align: center; margin-bottom: 20px; font-size: 1.6rem; font-weight: 900; color: var(--charcoal); border-bottom: 4px solid var(--vibrant-tillian); display: inline-block; padding-bottom: 4px; }
+        .section-heading-wrap { text-align: center; margin-bottom: 5px; }
+
+        .flashcard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .flashcard { background: var(--white); border: 2px solid #e0dcd0; border-radius: 14px; padding: 22px 16px 18px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04); transition: all 0.25s ease; }
+        .flashcard:hover { transform: translateY(-5px); border-color: var(--vibrant-tillian); box-shadow: 0 12px 28px rgba(0, 255, 255, 0.18); }
+        .flashcard-english { font-size: 1rem; font-weight: 800; color: var(--charcoal); margin-bottom: 14px; padding: 7px 12px; background: var(--pale-green); border-radius: 6px; width: 100%; }
+
+        .card-tabs { display: flex; justify-content: center; gap: 6px; margin-bottom: 16px; width: 100%; flex-wrap: wrap; }
+        .tab-btn { background: var(--bg-cream); border: 1px solid #ccc; color: var(--charcoal); padding: 5px 12px; border-radius: 18px; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease; }
+        .tab-btn.active { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+        .tab-content { display: none; width: 100%; animation: fadeIn 0.3s ease; }
+        .tab-content.active { display: flex; flex-direction: column; align-items: center; }
+
+        .flashcard-tigrinya { font-size: 1.9rem; color: var(--accent-red); font-weight: 900; margin-bottom: 4px; line-height: 1.3; }
+        .flashcard-transliteration { font-size: 0.95rem; color: var(--muted-green); font-style: italic; font-weight: 700; margin-bottom: 16px; }
+
+        .audio-group { display: flex; align-items: center; justify-content: center; gap: 12px; }
+        .audio-btn { border-radius: 50%; width: 48px; height: 48px; display: inline-flex; justify-content: center; align-items: center; font-size: 1.3rem; cursor: pointer; transition: all 0.3s ease; }
+        .audio-btn.flow-border-white:hover { background: linear-gradient(var(--vibrant-tillian), var(--vibrant-tillian)) padding-box, linear-gradient(135deg, var(--vibrant-tillian), var(--golden-yellow), var(--accent-red), var(--vibrant-tillian)) border-box; color: var(--charcoal) !important; transform: scale(1.15); }
+        .turtle-btn:hover { background: linear-gradient(var(--very-green), var(--very-green)) padding-box, linear-gradient(135deg, var(--vibrant-tillian), var(--golden-yellow), var(--accent-red), var(--vibrant-tillian)) border-box !important; }
+
+        .game-section { background: var(--charcoal); border-radius: 18px; padding: 45px 25px; text-align: center; color: var(--white); margin-bottom: 40px; box-shadow: 0 10px 28px rgba(0,0,0,0.18); border-bottom: 5px solid var(--accent-red); }
+        .game-section h2 { font-size: 2rem; color: var(--bright-yellow); margin-bottom: 8px; }
+        .game-section p { font-size: 1rem; margin-bottom: 28px; color: var(--pale-green); }
+
+        .progress-wrapper { width: 100%; max-width: 450px; margin: 0 auto 25px auto; }
+        .progress-text { font-size: 0.9rem; color: var(--white); font-weight: bold; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1.5px; }
+        .progress-container { width: 100%; height: 10px; background: rgba(255,255,255,0.12); border-radius: 10px; overflow: hidden; }
+        .progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--vibrant-tillian), #00ffcc); border-radius: 10px; transition: width 0.5s ease; box-shadow: 0 0 8px rgba(0,255,255,0.4); }
+
+        .game-audio-btn { background: var(--vibrant-tillian); color: var(--charcoal); font-size: 2.6rem; border-radius: 50%; width: 80px; height: 80px; border: 4px solid var(--white); cursor: pointer; display: inline-flex; justify-content: center; align-items: center; margin-bottom: 25px; transition: transform 0.3s ease; }
+        .game-audio-btn:hover { transform: scale(1.08); }
+        .game-audio-btn.pulse-attention { animation: pulse-cyan 1.5s infinite; }
+
+        .game-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; max-width: 650px; margin: 0 auto; }
+        .game-option { background: var(--white); color: var(--charcoal); font-weight: 800; font-size: 0.95rem; padding: 14px 16px; border-radius: 10px; border: 2px solid transparent; cursor: pointer; transition: all 0.2s ease; }
+        .game-option:hover { transform: translateY(-2px); background: var(--pale-green); border-color: var(--vibrant-tillian); }
+        .game-option.correct { background: var(--vibrant-tillian) !important; border-color: var(--white) !important; color: var(--charcoal) !important; }
+        .game-option.wrong { background: var(--accent-red) !important; color: var(--white) !important; border-color: var(--white) !important; }
+        .feedback-message { font-size: 1.2rem; font-weight: bold; margin-top: 20px; min-height: 28px; }
+
+        .back-wrap { text-align: center; }
+        .back-link { display: inline-block; text-decoration: none; font-weight: 800; padding: 10px 22px; border-radius: 25px; color: var(--charcoal); background: var(--white); border: 2px solid #d5d0c5; transition: all 0.3s ease; font-size: 0.95rem; }
+        .back-link:hover { background: var(--charcoal); color: var(--vibrant-tillian); border-color: var(--charcoal); }
+
+        @media (max-width: 600px) {
+            .lesson-title { font-size: 2rem; }
+            .flashcard-tigrinya { font-size: 1.6rem; }
+            .game-section { padding: 30px 15px; }
+            .flashcard-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-header">
+        <a href="/page/index.html" class="logo-frame">
+            <div class="logo-inner">
+                <img src="/images/bm1.png" alt="BM Insights Logo" class="logo-img">
+                <span class="logo-text">BM-INSIGHTS</span>
+            </div>
+        </a>
+    </div>
+
+    <main>
+        <div class="lesson-header">
+            <span class="lesson-tag">Vocabulary & Daily Expressions</span>
+            <h1 class="lesson-title">Lesson 4: Farewells & Actions</h1>
+            <p class="lesson-subtitle">Learn how to say goodbye, make future plans, and talk about coming and going in Tigrinya.</p>
+        </div>
+
+        <!-- SECTION 1: EVENING & NIGHT -->
+        <div class="section-heading-wrap">
+            <h2 class="section-heading">Evening & Night Greetings</h2>
+        </div>
+
+        <div class="flashcard-grid">
+            <!-- Good evening -->
+            <div class="flashcard tabbed-card">
+                <div class="flashcard-english">Good evening</div>
+                <div class="card-tabs">
+                    <button class="tab-btn active" onclick="switchVariant(this, 'bruk_ev')">Bruk</button>
+                    <button class="tab-btn" onclick="switchVariant(this, 'lwam_ev')">Lwam</button>
+                </div>
+                <div class="tab-content bruk_ev active">
+                    <div class="flashcard-tigrinya">ቡሩኽ ምሸት</div>
+                    <div class="flashcard-transliteration">Bruk mshet</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/bruk_mshet.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/bruk_mshet.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="tab-content lwam_ev">
+                    <div class="flashcard-tigrinya">ልዋም ምሸት</div>
+                    <div class="flashcard-transliteration">Lwam mshet</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/lwam_mshet.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/lwam_mshet.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Good night -->
+            <div class="flashcard tabbed-card">
+                <div class="flashcard-english">Good night</div>
+                <div class="card-tabs">
+                    <button class="tab-btn active" onclick="switchVariant(this, 'bruk_nt')">Bruk</button>
+                    <button class="tab-btn" onclick="switchVariant(this, 'lwam_nt')">Lwam</button>
+                </div>
+                <div class="tab-content bruk_nt active">
+                    <div class="flashcard-tigrinya">ብሩኽ ለይቲ</div>
+                    <div class="flashcard-transliteration">Bruk leyti</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/bruk_leyti.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/bruk_leyti.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+                <div class="tab-content lwam_nt">
+                    <div class="flashcard-tigrinya">ልዋም ለይቲ</div>
+                    <div class="flashcard-transliteration">Lwam leyti</div>
+                    <div class="audio-group">
+                        <button class="audio-btn flow-border-white" onclick="playAudio('/audio/lwam_leyti.mp3')">🔊</button>
+                        <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/lwam_leyti.mp3', 0.6)">🐢</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: SAYING GOODBYE -->
+        <div class="section-heading-wrap">
+            <h2 class="section-heading">Saying Goodbye</h2>
+        </div>
+
+        <div class="flashcard-grid">
+            <!-- Have a good day (Male) -->
+            <div class="flashcard">
+                <div class="flashcard-english">Have a good day (Male)</div>
+                <div class="flashcard-tigrinya">ሰናይ መዓልቲ ይግበረልካ</div>
+                <div class="flashcard-transliteration">senay mealti yg-berelka</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/senay_mealti_m.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/senay_mealti_m.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- Have a good day (Female) -->
+            <div class="flashcard">
+                <div class="flashcard-english">Have a good day (Female)</div>
+                <div class="flashcard-tigrinya">ሰናይ መዓልቲ ይግበረልኪ</div>
+                <div class="flashcard-transliteration">senay mealti yg-berelki</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/senay_mealti_f.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/senay_mealti_f.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- Goodbye (Male) -->
+            <div class="flashcard">
+                <div class="flashcard-english">Goodbye (Male)</div>
+                <div class="flashcard-tigrinya">ድሓን ኩን።</div>
+                <div class="flashcard-transliteration">Dehan kun</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/dehan_kun.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/dehan_kun.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- Goodbye (Female) -->
+            <div class="flashcard">
+                <div class="flashcard-english">Goodbye (Female)</div>
+                <div class="flashcard-tigrinya">ድሓን ኩኒ።</div>
+                <div class="flashcard-transliteration">Dehan kuni</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/dehan_kuni.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/dehan_kuni.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- Goodbye (Plural) -->
+            <div class="flashcard">
+                <div class="flashcard-english">Goodbye (Plural)</div>
+                <div class="flashcard-tigrinya">ድሓን ኩኑ</div>
+                <div class="flashcard-transliteration">Dahan kunu</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/dehan_kunu.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/dehan_kunu.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- See you tomorrow -->
+            <div class="flashcard">
+                <div class="flashcard-english">See you tomorrow.</div>
+                <div class="flashcard-tigrinya">ጽባሕ የራኽበና</div>
+                <div class="flashcard-transliteration">tsibah yerakbena</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/tsibah_yerakbena.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/tsibah_yerakbena.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: COMING & GOING -->
+        <div class="section-heading-wrap">
+            <h2 class="section-heading">Coming & Going</h2>
+        </div>
+
+        <div class="flashcard-grid">
+            <!-- I will come -->
+            <div class="flashcard">
+                <div class="flashcard-english">I will come</div>
+                <div class="flashcard-tigrinya">ክመጽእ ኢየ።</div>
+                <div class="flashcard-transliteration">Kemexie iye</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kemexie_iye.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kemexie_iye.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- I will come later -->
+            <div class="flashcard">
+                <div class="flashcard-english">I will come later</div>
+                <div class="flashcard-tigrinya">ደሓር ክመጽእ ኢየ።</div>
+                <div class="flashcard-transliteration">Dahar kemexie iye</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/dahar_kemexie_iye.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/dahar_kemexie_iye.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- She will come later -->
+            <div class="flashcard">
+                <div class="flashcard-english">She will come later</div>
+                <div class="flashcard-tigrinya">ደሓር ክትመጽእ ኢያ።</div>
+                <div class="flashcard-transliteration">Dahar kt-mexie iy-a</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/dahar_kt_mexie_iya.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/dahar_kt_mexie_iya.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- Will you come? (m) -->
+            <div class="flashcard">
+                <div class="flashcard-english">Will you come? (m)</div>
+                <div class="flashcard-tigrinya">ክተመጽእ ዲኻ፧</div>
+                <div class="flashcard-transliteration">Kt-mexie dika</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kt_mexie_dika.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kt_mexie_dika.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+
+            <!-- Will you come? (f) -->
+            <div class="flashcard">
+                <div class="flashcard-english">Will you come? (f)</div>
+                <div class="flashcard-tigrinya">ክተመጺ ዲኺ፧</div>
+                <div class="flashcard-transliteration">Kt-mexie diki</div>
+                <div class="audio-group">
+                    <button class="audio-btn flow-border-white" onclick="playAudio('/audio/kt_mexie_diki.mp3')">🔊</button>
+                    <button class="audio-btn flow-border-white turtle-btn" onclick="playAudio('/audio/kt_mexie_diki.mp3', 0.6)">🐢</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- GAME -->
+        <div class="game-section">
+            <h2>Test Your Listening</h2>
+            <p>Click play to hear a phrase, then select the matching English translation!</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-text" id="progress-text">0 / 10 Mastered</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="game-progress-bar"></div>
+                </div>
+            </div>
+
+            <button id="game-main-audio" class="game-audio-btn" onclick="playGameAudio()">🔊</button>
+            <div class="game-options-grid" id="game-options-container"></div>
+            <div id="game-feedback" class="feedback-message"></div>
+        </div>
+
+        <div class="back-wrap">
+            <a href="/page/index.html" class="back-link">← Back to Lessons</a>
+        </div>
+    </main>
+
+    <script>
+        function switchVariant(btn, target) {
+            const card = btn.closest('.flashcard');
+            card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            card.querySelector(`.tab-content.${target}`).classList.add('active');
+        }
+
+        function playAudio(url, speed = 1.0) {
+            const a = new Audio(url);
+            a.playbackRate = speed;
+            a.play().catch(() => {});
+        }
+
+        const lessonVocabulary = [
+            { english: "Good evening", audio: "/audio/bruk_mshet.mp3" },
+            { english: "Good night", audio: "/audio/bruk_leyti.mp3" },
+            { english: "Have a good day (Male)", audio: "/audio/senay_mealti_m.mp3" },
+            { english: "Have a good day (Female)", audio: "/audio/senay_mealti_f.mp3" },
+            { english: "Goodbye (Male)", audio: "/audio/dehan_kun.mp3" },
+            { english: "Goodbye (Female)", audio: "/audio/dehan_kuni.mp3" },
+            { english: "Goodbye (Plural)", audio: "/audio/dehan_kunu.mp3" },
+            { english: "See you tomorrow", audio: "/audio/tsibah_yerakbena.mp3" },
+            { english: "I will come", audio: "/audio/kemexie_iye.mp3" },
+            { english: "I will come later", audio: "/audio/dahar_kemexie_iye.mp3" }
+        ];
+
+        let deck = [];
+        let currentAnswer = {};
+        let currentAudio = null;
+
+        function startGame() {
+            deck = [...lessonVocabulary];
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const fb = document.getElementById('game-feedback');
+            const cont = document.getElementById('game-options-container');
+            const total = lessonVocabulary.length;
+            const done = total - deck.length;
+
+            document.getElementById('game-progress-bar').style.width = (done / total) * 100 + '%';
+            document.getElementById('progress-text').innerText = `${done} / ${total} Mastered`;
+
+            if (deck.length === 0) {
+                cont.innerHTML = "";
+                document.getElementById('game-main-audio').style.display = "none";
+                fb.innerHTML = "🏆 You mastered every phrase!<br><br><button onclick='location.reload()' style='padding:10px 20px;border-radius:20px;font-weight:700;cursor:pointer;background:#fff;border:none;'>Play Again 🔄</button>";
+                fb.style.color = "var(--bright-yellow)";
+                return;
+            }
+
+            fb.innerText = "";
+            document.getElementById('game-main-audio').classList.add('pulse-attention');
+            cont.innerHTML = "";
+
+            const shuffled = [...deck].sort(() => Math.random() - 0.5);
+            currentAnswer = shuffled[0];
+            const wrongs = lessonVocabulary.filter(w => w.english !== currentAnswer.english).sort(() => Math.random() - 0.5).slice(0, 2);
+            const options = [currentAnswer, ...wrongs].sort(() => Math.random() - 0.5);
+
+            options.forEach(opt => {
+                const b = document.createElement("button");
+                b.className = "game-option";
+                b.innerText = opt.english;
+                b.onclick = () => checkAnswer(b, opt.english);
+                cont.appendChild(b);
+            });
+        }
+
+        function playGameAudio() {
+            document.getElementById('game-main-audio').classList.remove('pulse-attention');
+            if (currentAnswer.audio) {
+                if (currentAudio) { currentAudio.pause(); currentAudio.currentTime = 0; }
+                currentAudio = new Audio(currentAnswer.audio);
+                currentAudio.play();
+            }
+        }
+
+        function checkAnswer(btn, selected) {
+            const fb = document.getElementById('game-feedback');
+            if (fb.innerText.includes("Correct")) return;
+            if (selected === currentAnswer.english) {
+                btn.classList.add("correct");
+                fb.innerText = "Correct! 🎉";
+                fb.style.color = "var(--vibrant-tillian)";
+                deck = deck.filter(w => w.english !== currentAnswer.english);
+                setTimeout(loadQuestion, 1400);
+            } else {
+                btn.classList.add("wrong", "shake");
+                fb.innerText = "Try again!";
+                fb.style.color = "var(--accent-red)";
+                setTimeout(() => btn.classList.remove("shake"), 400);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", startGame);
+    </script>
+</body>
+</html>
